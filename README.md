@@ -206,7 +206,11 @@ let coordinate = CLLocationCoordinate2D(
 
 ## 시연 영상
 
-[![시연 영상](images/main_screen.png)](https://youtube.com/shorts/영상ID)
+<p align="center">
+  <a href="https://youtu.be/yDB8tKTZEN4">
+    <img src="images/main_screen.png" width="300">
+  </a>
+</p>
 YouTube 시연 영상 링크: https://youtu.be/yDB8tKTZEN4
 
 ---
