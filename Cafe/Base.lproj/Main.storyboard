@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rJ1-4m-BrB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cafe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="TwS-ey-Jzw">
+                                <rect key="frame" x="38" y="204" width="320" height="537.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지역별 카페 추천" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLO-7q-vNF">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지역을 선택하세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYY-OG-ygl">
+                                        <rect key="frame" x="0.0" y="41" width="320" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFJ-yr-gMB">
+                                        <rect key="frame" x="0.0" y="73.5" width="320" height="216"/>
+                                    </pickerView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="추천 카페" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0QC-ok-rY2">
+                                        <rect key="frame" x="0.0" y="301.5" width="320" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FaW-fM-ept">
+                                        <rect key="frame" x="0.0" y="337.5" width="320" height="200"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="FaW-fM-ept" secondAttribute="trailing" constant="20" id="HZj-rK-c8w"/>
+                                    <constraint firstItem="FaW-fM-ept" firstAttribute="leading" secondItem="TwS-ey-Jzw" secondAttribute="leading" constant="20" id="Lo9-wm-8rG"/>
+                                    <constraint firstAttribute="bottom" secondItem="FaW-fM-ept" secondAttribute="bottom" constant="20" id="NRX-QN-lc8"/>
+                                    <constraint firstItem="FaW-fM-ept" firstAttribute="top" secondItem="0QC-ok-rY2" secondAttribute="bottom" constant="30" id="uSn-T1-h4l"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ECA-E0-lDo"/>
+                    <connections>
+                        <outlet property="cafeListTitleLabel" destination="0QC-ok-rY2" id="vog-DV-UXz"/>
+                        <outlet property="cafeStackView" destination="FaW-fM-ept" id="195-aq-ivu"/>
+                        <outlet property="regionPickerView" destination="RFJ-yr-gMB" id="ScV-gN-Biq"/>
+                        <outlet property="selectLabel" destination="dYY-OG-ygl" id="crF-DJ-Jaj"/>
+                        <outlet property="titleLabel" destination="CLO-7q-vNF" id="027-8m-T5a"/>
+                        <segue destination="1Mc-eg-LcF" kind="show" identifier="showDetail" id="b51-fN-4ck"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="88.392857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZCu-cW-x8x">
+            <objects>
+                <navigationController id="rJ1-4m-BrB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EQV-zk-DEu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="da6-Qm-Zao"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eow-gR-Ptq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-665" y="43"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="poZ-dH-4lg">
+            <objects>
+                <viewController id="1Mc-eg-LcF" customClass="DetailViewController" customModule="Cafe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tSb-n7-ar2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="OtB-SO-NxA">
+                                <rect key="frame" x="20" y="108" width="374" height="734"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3pY-Nh-6ls">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="180"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="카페 이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQ1-Wd-be8">
+                                        <rect key="frame" x="0.0" y="192" width="374" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="주소" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPU-qz-81Q">
+                                        <rect key="frame" x="0.0" y="230.5" width="374" height="18"/>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="#키워드" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6V-gY-L42">
+                                        <rect key="frame" x="0.0" y="260.5" width="374" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="카페 설명" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9E-XI-wKX">
+                                        <rect key="frame" x="0.0" y="289.5" width="374" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="97Z-A5-XcO">
+                                        <rect key="frame" x="0.0" y="321" width="374" height="413"/>
+                                    </mapView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FtQ-B1-qLg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OtB-SO-NxA" firstAttribute="top" secondItem="FtQ-B1-qLg" secondAttribute="top" constant="20" id="9F4-LR-Sq2"/>
+                            <constraint firstItem="FtQ-B1-qLg" firstAttribute="bottom" secondItem="OtB-SO-NxA" secondAttribute="bottom" constant="20" id="I5P-5R-KZ0"/>
+                            <constraint firstItem="OtB-SO-NxA" firstAttribute="leading" secondItem="FtQ-B1-qLg" secondAttribute="leading" constant="20" id="Lhl-1y-LOl"/>
+                            <constraint firstItem="FtQ-B1-qLg" firstAttribute="trailing" secondItem="OtB-SO-NxA" secondAttribute="trailing" constant="20" id="rNa-3h-UPv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YYk-cC-tqu"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="nPU-qz-81Q" id="sUT-Jd-RBV"/>
+                        <outlet property="descriptionLabel" destination="E9E-XI-wKX" id="TkD-og-8JU"/>
+                        <outlet property="imageView" destination="3pY-Nh-6ls" id="gVp-qE-1te"/>
+                        <outlet property="keywordLabel" destination="B6V-gY-L42" id="Fki-CO-ODe"/>
+                        <outlet property="mapView" destination="97Z-A5-XcO" id="atI-Yf-lau"/>
+                        <outlet property="nameLabel" destination="yQ1-Wd-be8" id="Fvf-WF-aO9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f0Y-CR-sl0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-167" y="-630"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
