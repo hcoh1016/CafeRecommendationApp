@@ -201,6 +201,13 @@ let coordinate = CLLocationCoordinate2D(
     longitude: cafe.longitude
 )
 ```
+
+---
+
+## 시연 영상
+
+YouTube 시연 영상 링크: https://youtu.be/yDB8tKTZEN4
+
 ---
 
 ## 개발자
